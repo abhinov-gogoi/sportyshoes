@@ -1,0 +1,2 @@
+1.  H2 database name can be found in the spring logs  - https://stackoverflow.com/questions/56209686/h2-database-not-found-error-90146-h2-database-is-not-created-on-start
+2.
