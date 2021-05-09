@@ -1,2 +1,2 @@
 1.  H2 database name can be found in the spring logs  - https://stackoverflow.com/questions/56209686/h2-database-not-found-error-90146-h2-database-is-not-created-on-start
-2.
+2.  If /api/orders give exception put spring.jackson.serialization.fail-on-empty-beans=false in application.properties file - https://stackoverflow.com/questions/49357210/no-serializer-found-when-serializing-one-object/61962300#61962300

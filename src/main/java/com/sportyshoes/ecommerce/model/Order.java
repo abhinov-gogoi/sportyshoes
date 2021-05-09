@@ -1,8 +1,6 @@
 package com.sportyshoes.ecommerce.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -12,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "orders")
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 @JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="orderProducts")
 public class Order {
 
@@ -23,6 +22,7 @@ public class Order {
 
     private String status;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "pk.order")
     @Valid
     private List<OrderProduct> orderProducts = new ArrayList<>();
@@ -36,6 +36,11 @@ public class Order {
         }
 
         return sum;
+    }
+
+    @Transient
+    public int getNumberOfProducts() {
+        return this.orderProducts.size();
     }
 
     public Long getId() {
@@ -70,8 +75,4 @@ public class Order {
         this.orderProducts = orderProducts;
     }
 
-    @Transient
-    public int getNumberOfProducts() {
-        return this.orderProducts.size();
-    }
 }
