@@ -7,12 +7,22 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserService } from './service/user.service';
+import {EcommerceComponent} from "./ecommerce/ecommerce.component";
+import {ProductsComponent} from "./products/products.component";
+import {ShoppingCartComponent} from "./shopping-cart/shopping-cart.component";
+import {OrdersComponent} from "./orders/orders.component";
+import {EcommerceService} from "./services/EcommerceService";
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    AppComponent,
+    EcommerceComponent,
+    ProductsComponent,
+    ShoppingCartComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +30,7 @@ import { UserService } from './service/user.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, EcommerceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
