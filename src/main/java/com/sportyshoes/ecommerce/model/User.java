@@ -1,4 +1,4 @@
-package com.sportyshoes.application.entities;
+package com.sportyshoes.ecommerce.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

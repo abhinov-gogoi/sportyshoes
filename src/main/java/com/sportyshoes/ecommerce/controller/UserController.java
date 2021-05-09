@@ -1,7 +1,7 @@
-package com.sportyshoes.application.controllers;
+package com.sportyshoes.ecommerce.controller;
 
-import com.sportyshoes.application.entities.User;
-import com.sportyshoes.application.repositories.UserRepository;
+import com.sportyshoes.ecommerce.model.User;
+import com.sportyshoes.ecommerce.repository.UserRepository;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.sportyshoes.application.repositories;
+package com.sportyshoes.ecommerce.repository;
 
-import com.sportyshoes.application.entities.User;
+import com.sportyshoes.ecommerce.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
