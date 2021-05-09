@@ -9,36 +9,37 @@ import {OrdersComponent} from "../orders/orders.component";
     styleUrls: ['./ecommerce.component.css']
 })
 export class EcommerceComponent implements OnInit {
-    private collapsed = true;
-    orderFinished = false;
+  private collapsed = true;
+  orderFinished = false;
 
-    @ViewChild('productsC')
-    productsC: ProductsComponent;
+  ngOnInit(): void {
+  }
 
-    @ViewChild('shoppingCartC')
-    shoppingCartC: ShoppingCartComponent;
+  constructor() {
+  }
 
-    @ViewChild('ordersC')
-    ordersC: OrdersComponent;
+  @ViewChild('productsC')
+  productsC: ProductsComponent;
 
-    constructor() {
-    }
+  @ViewChild('shoppingCartC')
+  shoppingCartC: ShoppingCartComponent;
 
-    ngOnInit() {
-    }
+  @ViewChild('ordersC')
+  ordersC: OrdersComponent;
 
-    toggleCollapsed(): void {
-        this.collapsed = !this.collapsed;
-    }
+  toggleCollapsed(): void {
+    this.collapsed = !this.collapsed;
+  }
 
-    finishOrder(orderFinished: boolean) {
-        this.orderFinished = orderFinished;
-    }
+  finishOrder(orderFinished: boolean) {
+    this.orderFinished = orderFinished;
+  }
 
-    reset() {
-        this.orderFinished = false;
-        this.productsC.reset();
-        this.shoppingCartC.reset();
-        this.ordersC.paid = false;
-    }
+  reset() {
+    this.orderFinished = false;
+    this.productsC.reset();
+    this.shoppingCartC.reset();
+    this.ordersC.paid = false;
+  }
+
 }
