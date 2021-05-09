@@ -2,6 +2,7 @@ package com.sportyshoes.ecommerce.controller;
 
 import com.sportyshoes.ecommerce.model.Product;
 import com.sportyshoes.ecommerce.service.ProductService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.constraints.NotNull;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/products")
 public class ProductController {
 

@@ -7,7 +7,8 @@ import java.util.List;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin
+@RequestMapping("/api/users")
 public class UserController {
 
     private final UserRepository userRepository;
@@ -16,17 +17,12 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping("")
-    public String hello() {
-        return "OK";
-    }
-
-    @GetMapping("/users")
+    @GetMapping(value = { "", "/" })
     public List<User> getUsers() {
         return (List<User>) userRepository.findAll();
     }
 
-    @PostMapping("/users")
+    @PostMapping(value = { "", "/" })
     void addUser(@RequestBody User user) {
         userRepository.save(user);
     }
