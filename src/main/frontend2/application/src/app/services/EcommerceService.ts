@@ -1,5 +1,5 @@
 import {ProductOrder} from "../models/product-order.model";
-import {Subject} from "rxjs/internal/Subject";
+import {Subject} from "rxjs/Subject";
 import {ProductOrders} from "../models/product-orders.model";
 import {HttpClient} from '@angular/common/http';
 import {Injectable} from "@angular/core";
