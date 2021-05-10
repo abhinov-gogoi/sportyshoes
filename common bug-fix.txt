@@ -1,3 +1,4 @@
 1.  H2 database name can be found in the spring logs  - https://stackoverflow.com/questions/56209686/h2-database-not-found-error-90146-h2-database-is-not-created-on-start
 2.  If in backend API, /api/orders give exception, then put spring.jackson.serialization.fail-on-empty-beans=false in application.properties file - https://stackoverflow.com/questions/49357210/no-serializer-found-when-serializing-one-object/61962300#61962300
 3. solving CORS in 4200 vs 8080 - https://www.techiediaries.com/fix-cors-with-angular-cli-proxy-configuration/#:~:text=CORS%20headers%20are%20simply%20HTTP,server%20at%20a%20different%20origin.&text=but%20in%20our%20case%2C%20we,of%20an%20Angular%208%20application.
+4. Start frontend with PROXY command: ng serve --proxy-config proxy.js
