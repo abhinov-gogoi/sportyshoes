@@ -6,9 +6,10 @@ import {Injectable} from "@angular/core";
 
 @Injectable()
 export class EcommerceService {
-    private productsUrl = "/api/products";
-    private ordersUrl = "/api/orders";
-    // private productsUrl = "http://localhost:8080/api/products";
+    // private productsUrl = "/api/products";
+    // private ordersUrl = "/api/orders";
+    private ordersUrl = "http://localhost:8080/api/orders";
+    private productsUrl = "http://localhost:8080/api/products";
 
     private productOrder: ProductOrder;
     private orders: ProductOrders = new ProductOrders();
