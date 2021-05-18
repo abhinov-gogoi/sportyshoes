@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
     <groupId>com.sportyshoes</groupId>
-    <artifactId>sportyshoes</artifactId>
+    <artifactId>SportyShoes</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sportyshoes</name>
+    <name>SportyShoes</name>
     <description>Ecommerce store spring and angular</description>
     <properties>
         <java.version>11</java.version>

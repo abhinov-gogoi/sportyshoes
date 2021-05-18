@@ -1,11 +1,9 @@
 package com.sportyshoes.ecommerce.controller;
 
 import com.sportyshoes.ecommerce.model.Product;
+import com.sportyshoes.ecommerce.model.User;
 import com.sportyshoes.ecommerce.service.ProductService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.NotNull;
 
@@ -14,7 +12,7 @@ import javax.validation.constraints.NotNull;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    private ProductService productService;
+    private final ProductService productService;
 
     public ProductController(ProductService productService) {
         this.productService = productService;
@@ -23,5 +21,10 @@ public class ProductController {
     @GetMapping(value = { "", "/" })
     public @NotNull Iterable<Product> getProducts() {
         return productService.getAllProducts();
+    }
+
+    @PostMapping(value = { "", "/" })
+    void addProduct(@RequestBody Product product) {
+        productService.save(product);
     }
 }
